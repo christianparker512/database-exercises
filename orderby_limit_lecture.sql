@@ -8,8 +8,12 @@ SELECT first_name, last_name
 FROM employees
 ORDER BY first_name DESC, last_name ASC;
 
-SELECT * FROM employees;
+SELECT * FROM employees
+ORDER BY gender
+LIMIT 15;
 
 SELECT first_name, last_name, birth_date
 FROM employees
 ORDER BY birth_date;
+
+DESCRIBE employees;
