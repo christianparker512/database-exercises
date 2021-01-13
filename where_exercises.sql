@@ -1,4 +1,5 @@
 use employees;
+SELECT first_name
 
 SELECT first_name
 FROM employees
@@ -40,3 +41,6 @@ SELECT first_name, last_name
 FROM employees
 WHERE last_name like '%q%';
 
+SELECT first_name, last_name
+FROM employees
+WHERE last_name like '%q%' AND NOT last_name LIKE '%qu%';
