@@ -23,3 +23,8 @@ SELECT CURTIME();
 
 #Returns the unitx time stamp
 SELECT UNIX_TIMESTAMP();
+
+SELECT CONCAT (
+    'Teaching people to code for ',
+    UNIX_TIMESTAMP() - UNIX_TIMESTAMP('2014-02-04'), 'seconds'
+           );
