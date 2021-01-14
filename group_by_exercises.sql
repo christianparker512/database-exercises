@@ -29,6 +29,7 @@ SELECT DISTINCT last_name, COUNT(*)
 FROM employees
 WHERE last_name LIKE '%q%'
   AND last_name NOT LIKE '%qu%'
+    OR last_name LIKE 'E%e'
 GROUP BY last_name
 ORDER BY last_name;
 
