@@ -3,7 +3,6 @@ USE codeup_test_db;
 SHOW TABLES;
 
 SELECT * FROM albums;
-
 DESCRIBE albums;
 
 ALTER TABLE albums
