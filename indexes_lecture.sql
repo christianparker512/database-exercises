@@ -30,7 +30,7 @@ DESCRIBE pets;
 # Display all unique identifiers/ indices for our pets table
 SHOW INDEX from pets;
 
-# Modified id to have a primary key.
+# Modified id to have a primary key. Column isn't really necessary...It did work without it.
 ALTER TABLE pets
     MODIFY COLUMN id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT;
 
