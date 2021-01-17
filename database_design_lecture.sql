@@ -140,6 +140,12 @@ SELECT first_name, last_name
 From employees
 where last_name like 'q%';
 
+SELECT first_name, last_name
+FROM employees
+where (first_name = 'Irena'
+    or first_name = 'vidya'
+    or first_name = 'maya');
+
 
 1. All tables except associative tables should have a single primary key called id.
 
