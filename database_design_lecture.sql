@@ -91,6 +91,10 @@ SELECT emp_no, first_name, last_name
 FROM employees
 WHERE emp_no BETWEEN 10026 and 10082;
 
+SELECT emp_no, first_name, last_name
+FROM employees
+Where last_name IN ('Baek');
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
