@@ -158,6 +158,11 @@ FROM employees
 WHERE last_name
     like 'E%' OR last_name like '%E';
 
+SELECT *
+FROM employees
+WHERE last_name
+    like 'E%' AND last_name like '%E';
+
 
 1. All tables except associative tables should have a single primary key called id.
 
