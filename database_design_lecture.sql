@@ -81,6 +81,7 @@ SELECT * FROM employees where hire_date > '1985-01-01';
 SELECT * from employees where hire_date < '1985-01-01';
 
 SELECT * from employees where first_name like 'p%';
+SELECT * from employees where last_name like '%p';
 
 1. All tables except associative tables should have a single primary key called id.
 
