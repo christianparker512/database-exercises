@@ -83,6 +83,14 @@ SELECT * from employees where hire_date < '1985-01-01';
 SELECT * from employees where first_name like 'p%';
 SELECT * from employees where last_name like '%p';
 
+SELECT first_name
+FROM employees
+where first_name LIKE '%isa%';
+
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE emp_no BETWEEN 10026 and 10082;
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
