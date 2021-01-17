@@ -103,6 +103,10 @@ SELECT emp_no, first_name, last_name
 FROM employees
 where last_name IN('Baek') and emp_no < 20000;
 
+SELECT emp_no, first_name, last_name
+FROM employees
+where last_name IN('Baek') and emp_no < 20000 or first_name = 'Shridhar';
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
