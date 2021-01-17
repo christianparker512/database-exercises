@@ -95,6 +95,12 @@ SELECT emp_no, first_name, last_name
 FROM employees
 Where last_name IN ('Baek');
 
+SELECT emp_no, first_name, last_name
+FROM employees
+Where last_name IN ('Baek', 'dredge');
+
+
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
