@@ -107,6 +107,18 @@ SELECT emp_no, first_name, last_name
 FROM employees
 where last_name IN('Baek') and emp_no < 20000 or first_name = 'Shridhar';
 
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE emp_no < 20000
+  AND (
+            last_name IN ('Herber','Baek')
+        or first_name = 'Shridhar'
+    );
+
+
+Select emp_no, first_name, last_name
+from employees
+where first_name in ('Irena', 'vidya','maya');
 1. All tables except associative tables should have a single primary key called id.
 
 	```
