@@ -119,6 +119,14 @@ WHERE emp_no < 20000
 Select emp_no, first_name, last_name
 from employees
 where first_name in ('Irena', 'vidya','maya');
+
+select emp_no, first_name, last_name
+from employees
+where last_name like 'e%';
+
+select emp_no, first_name, last_name, hire_date
+from employees
+where hire_date > '1990-01-01';
 1. All tables except associative tables should have a single primary key called id.
 
 	```
