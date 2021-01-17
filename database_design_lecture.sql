@@ -46,28 +46,38 @@ A way to visually describe the schema of a database and the relationships betwee
 
     SELECT * FROM authors;
 
-    CREATE TABLE quotes (
+    CREATE TABLE quotes1 (
         id INT UNSIGNED NOT NULL AUTO_INCREMENT,
         content TEXT NOT NULL,
         author_id INT UNSIGNED NOT NULL,
         Primary Key (id),
         Foreign Key (author_id) REFERENCES authors(id)
     );
-    INSERT INTO quotes(author_id, content)
+    INSERT INTO quotes1(author_id, content)
     VALUES (1, 'good times'),
            (2, 'whatever'),
            (3, 'Anchor Down'),
             (1, 'Hook em');
     SELECT * from authors;
     DESCRIBE authors;
-    SELECT * from quotes;
+    SELECT * from quotes1;
     DESCRIBE quotes;
     SELECT * from quotes;
     SELECT * FROM quotes where id = 1;
     SELECT * from quotes where id = 2;
 
+    SELECT * from quotes;
+INSERT INTO authors(first_name, last_name) VALUES
+('Douglas', 'Adams'),
+('Mark', 'Twain'),
+('Kurt', 'Vonnegut'),
+('Carol', 'Dweck'),
+('John', 'Muir');
 
 
+
+SELECT * FROM employees WHERE hire_date = '1985-01-01';
+SELECT * FROM employees where hire_date > '1985-01-01';
 
 1. All tables except associative tables should have a single primary key called id.
 
