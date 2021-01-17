@@ -127,6 +127,20 @@ where last_name like 'e%';
 select emp_no, first_name, last_name, hire_date
 from employees
 where hire_date > '1990-01-01';
+
+select emp_no, first_name, last_name, birth_date
+from employees
+where birth_date like '%-12-25';
+
+SELECT emp_no, first_name, last_name, hire_date
+from employees
+where hire_date between '1990-01-01' and '1999-12-31';
+
+SELECT first_name, last_name
+From employees
+where last_name like 'q%';
+
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
