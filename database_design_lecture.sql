@@ -146,6 +146,18 @@ where (first_name = 'Irena'
     or first_name = 'vidya'
     or first_name = 'maya');
 
+SELECT *
+FROM employees
+Where (first_name = 'Irena'
+    or first_name = 'Vidya'
+    or first_name = 'Maya')
+  and gender = 'M';
+
+SELECT *
+FROM employees
+WHERE last_name
+    like 'E%' OR last_name like '%E';
+
 
 1. All tables except associative tables should have a single primary key called id.
 
