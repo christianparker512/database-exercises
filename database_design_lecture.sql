@@ -163,6 +163,15 @@ FROM employees
 WHERE last_name
     like 'E%' AND last_name like '%E';
 
+SELECT *
+FROM employees
+WHERE hire_date BETWEEN 1990 and 1999;
+
+SELECT *
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'
+    AND '1999-12-31' AND birth_date like '%-12-25';
+
 
 1. All tables except associative tables should have a single primary key called id.
 
