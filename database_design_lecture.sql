@@ -218,7 +218,7 @@ SELECT emp_no, concat(first_name, ' ', last_name)
 FROM employees
 where first_name like 'M%';
 
-SELECT emp_no, concat(first_name, ' ', last_name)
+SELECT curdate(), emp_no, concat(first_name, ' ', last_name)
 FROM employees
 where first_name not like '%a%' and last_name NOT LIKE '%a%';
 
@@ -227,6 +227,14 @@ select Now();
 select curdate();
 
 Select curtime();
+
+Select distinct first_name
+from employees;
+
+SELECT first_name
+From employees
+GROUP BY first_name desc;
+
 
 1. All tables except associative tables should have a single primary key called id.
 
