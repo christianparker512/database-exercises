@@ -300,6 +300,10 @@ from employees
 where first_name in ('Irena', 'vidya', 'maya')
 group by gender;
 
+SELECT concat(first_name, ' ', last_name) AS full_name
+from employees
+Limit 25;
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
