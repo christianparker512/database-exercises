@@ -235,6 +235,14 @@ SELECT first_name
 From employees
 GROUP BY first_name desc;
 
+SELECT first_name
+From employees
+Group By last_name, first_name;
+
+Select last_name, first_name
+from employees
+group by last_name, first_name;
+
 
 1. All tables except associative tables should have a single primary key called id.
 
