@@ -243,6 +243,14 @@ Select last_name, first_name
 from employees
 group by last_name, first_name;
 
+SELECT COUNT(*), first_name, last_name
+from employees
+Group by first_name, last_name;
+
+select first_name, count(first_name)
+from employees
+where first_name not like '%a%'
+group by first_name;
 
 1. All tables except associative tables should have a single primary key called id.
 
