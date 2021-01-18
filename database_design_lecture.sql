@@ -211,6 +211,7 @@ limit 10;
 SELECT emp_no, first_name, last_name
 FROM employees
 where first_name like 'M%'
+# order by last_name desc
 limit 25 offset 50;
 
 
