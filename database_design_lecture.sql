@@ -222,6 +222,8 @@ SELECT emp_no, concat(first_name, ' ', last_name)
 FROM employees
 where first_name not like '%a%' and last_name NOT LIKE '%a%';
 
+select Now();
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
