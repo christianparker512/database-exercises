@@ -252,6 +252,12 @@ from employees
 where first_name not like '%a%'
 group by first_name;
 
+select hire_date, count(*)
+from employees
+group by hire_date
+order by count(*) desc
+limit 10;
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
