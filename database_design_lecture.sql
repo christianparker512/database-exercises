@@ -261,16 +261,44 @@ limit 10;
 # USing the term destinct to find unique titles in the table.
 SELECT distinct title
 From Titles;
-
+# 2. In your script, use DISTINCT to find the unique titles in the titles table. Your results should look like:
 SELECT last_name
 from employees
 WHere last_name like 'e%' and last_name like '%e'
 group by last_name;
 
+# 3. Find your query for employees whose last names start and end with 'E'
 SELECT last_name
 FROM employees
 WHERE last_name LIKE 'e%' AND last_name LIKE '%e'
 GROUP BY last_name;
+
+
+# 4. Update your previous query to now find unique combinations of first and last name where the last name starts and ends with 'E'. You should get 846 rows.
+Select distinct first_name, last_name
+from employees
+Where last_name like 'e%' and last_name like '%e'
+order by last_name;
+#5. find the unique last names iwth 'q' but not 'qu' your results should be:
+select distinct last_name
+from employees
+where last_name like '%q%'
+    and last_name not like '%qu%'
+    order by last_name;
+#6.  Add a COUNT() to your results and use ORDER BY to make it easier to find employees whose unusual name is shared with others.
+Select distinct last_name, count(*)
+from employees
+where last_name like '%q%'
+    and last_name not like '%qu'
+    or last_name like '%e'
+    GROUP by last_name
+    order by last_name;
+
+#7 Update your query for 'Irena', vidya, maya. use count(*) and group by to find the number of employees for each gender with those names. Your results should be:
+SELECT count(*), gender
+from employees
+where first_name in ('Irena', 'vidya', 'maya')
+group by gender;
 
 1. All tables except associative tables should have a single primary key called id.
 
