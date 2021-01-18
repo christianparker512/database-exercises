@@ -258,6 +258,20 @@ group by hire_date
 order by count(*) desc
 limit 10;
 
+# USing the term destinct to find unique titles in the table.
+SELECT distinct title
+From Titles;
+
+SELECT last_name
+from employees
+WHere last_name like 'e%' and last_name like '%e'
+group by last_name;
+
+SELECT last_name
+FROM employees
+WHERE last_name LIKE 'e%' AND last_name LIKE '%e'
+GROUP BY last_name;
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
