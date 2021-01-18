@@ -208,6 +208,12 @@ Where first_name like 'M%'
 # order by first_name asc
 limit 10;
 
+SELECT emp_no, first_name, last_name
+FROM employees
+where first_name like 'M%'
+limit 25 offset 50;
+
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
