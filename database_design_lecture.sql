@@ -202,6 +202,12 @@ select first_name, last_name
 FROM employees
 Order by last_name asc;
 
+Select emp_no, first_name, last_name
+FROM employees
+Where first_name like 'M%'
+# order by first_name asc
+limit 10;
+
 1. All tables except associative tables should have a single primary key called id.
 
 	```
