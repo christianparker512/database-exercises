@@ -300,9 +300,34 @@ from employees
 where first_name in ('Irena', 'vidya', 'maya')
 group by gender;
 
+# Concatting first and last name and then adding the alias as full_name
 SELECT concat(first_name, ' ', last_name) AS full_name
 from employees
 Limit 25;
+
+
+select concat(first_name, ' ', last_name) as full_name
+from employees
+order by full_name
+limit 25;
+
+select hire_date, count(*)
+from employees
+group by hire_date
+order by count(*) desc
+limit 25;
+
+Select hire_date, count(*) as number_hired
+from employees
+group by hire_date
+order by number_hired Desc
+limit 10;
+
+SELECT concat(first_name, ' ', last_name) as full_name
+from employees as emp
+group by full_name, last_name
+order by last_name
+limit 25;
 
 1. All tables except associative tables should have a single primary key called id.
 
