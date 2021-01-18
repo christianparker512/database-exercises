@@ -214,6 +214,10 @@ where first_name like 'M%'
 # order by last_name desc
 limit 25 offset 50;
 
+SELECT emp_no, concat(first_name, ' ', last_name)
+FROM employees
+where first_name like 'M%';
+
 
 1. All tables except associative tables should have a single primary key called id.
 
