@@ -323,11 +323,44 @@ group by hire_date
 order by number_hired Desc
 limit 10;
 
+# Giving the whole table an alias
 SELECT concat(first_name, ' ', last_name) as full_name
 from employees as emp
 group by full_name, last_name
 order by last_name
 limit 25;
+
+# CREATE TABLE authors (
+#     id INT NOT NULL AUTO_INCREMENT
+#     first_name VARCHAR(100) not null,
+#     last_name VARCHAR(100) not null,
+#     primary key (id)
+#     unique (first_name, last_name)
+# );
+
+create table roles3(
+    id INT UNSIGNED not null auto_increment,
+    name varchar (100) not null,
+    primary key(id)
+);
+
+describe roles3;
+
+create table users3(
+        id INT unsigned not null auto_increment,
+        name varchar(100) not null,
+        email varchar(100) not null,
+        role3_id INT unsigned default null,
+        primary key (id),
+        foreign key(role3_id) references roles3(id)
+);
+describe users;
+
+describe users3;
+
+select users.name as user_name, roles.name as role_name
+from users
+join roles on users.role_id = roles.id;
 
 1. All tables except associative tables should have a single primary key called id.
 
